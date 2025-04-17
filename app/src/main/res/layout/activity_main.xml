@@ -8,72 +8,107 @@
 
     <ImageView
         android:id="@+id/backroundImg"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#0E0E0E"
         android:scaleType="centerCrop"
-        android:src="@drawable/backround" />
-
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
+        android:src="@drawable/backround"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.849">
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@+id/backroundImg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/backroundImg">
 
 
-        <TextView
-            android:id="@+id/signInText"
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/user_input"
-            android:textAlignment="center" />
+            android:layout_height="match_parent">
 
-        <EditText
-            android:id="@+id/etUsuario"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Usuario"
-            android:inputType="textPersonName"
-            android:padding="12dp"
-            android:background="@drawable/edittext_background"
-            />
-<!--            android:background="@drawable/edittext_background"/>-->
+            <TextView
+                android:id="@+id/signInText"
+                android:layout_width="204dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="70dp"
+                android:text="@string/user_input"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.497"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/etUsuario"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edittext_background"
+                android:hint="Usuario"
+                android:inputType="textPersonName"
+                android:padding="12dp"
+                app:layout_constraintBottom_toTopOf="@+id/etPassword"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.496"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/signInText"
+                app:layout_constraintVertical_bias="0.86" />
+
+            <EditText
+                android:id="@+id/etPassword"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="188dp"
+                android:background="@drawable/edittext_background"
+                android:hint="Contraseña"
+                android:inputType="textPassword"
+                android:padding="12dp"
+                app:layout_constraintBottom_toTopOf="@+id/signInBtn"
+                app:layout_constraintEnd_toEndOf="@+id/etUsuario"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/etUsuario" />
+
+            <Button
+                android:id="@+id/signInBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:layout_weight="1"
+                android:backgroundTint="#44803F"
+                android:onClick="updateMsg"
+                android:text="@string/singInMsg"
+                app:layout_constraintBottom_toTopOf="@+id/newbtn"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <Button
+                android:id="@+id/newbtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="48dp"
+                android:backgroundTint="#44803F"
+                android:text="@string/signUpMsg"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/signInBtn"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/signInBtn" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!--            android:background="@drawable/edittext_background"/>-->
 
         <!-- Campo de contraseña -->
-        <EditText
-            android:id="@+id/etPassword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Contraseña"
-            android:inputType="textPassword"
-            android:padding="12dp"
-            android:layout_marginTop="12dp"
-            android:background="@drawable/edittext_background"
-            />
 
-<!--            //android:background="@drawable/edittext_background"/>-->
+        <!--            //android:background="@drawable/edittext_background"/>--><![CDATA[
 
-        <Button
-            android:id="@+id/signInBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="0dp"
-            android:layout_marginTop="224dp"
-            android:layout_weight="1"
-            android:backgroundTint="#44803F"
-            android:onClick="updateMsg"
-            android:text="@string/singInMsg" />
-
-        <Button
-            android:id="@+id/newbtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:backgroundTint="#44803F"
-            android:text="@string/signUpMsg" />
         />
+    ]]>
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
