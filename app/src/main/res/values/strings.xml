@@ -2,6 +2,8 @@
     <string name="app_name">TeamUp</string>
     <string name="user_input">Ingrese usuario</string>
     <string name="singInMsg">Iniciar sesion</string>
-    <string name="newMesg">Cambio de texto</string>
-    <string name="signUpMsg" >Crear cuenta</string>
+    <string name="newMsg">Cambio de texto</string>
+    <string name="signUpMsg">Crear cuenta</string>
+    <string name="eventTraining">Entrenamiento</string>
+    <string name="eventMatch"></string>
 </resources>

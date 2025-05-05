@@ -7,12 +7,12 @@
     tools:context=".MainActivity">
 
     <ImageView
-        android:id="@+id/backroundImg"
+        android:id="@+id/teamup"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="#0E0E0E"
         android:scaleType="centerCrop"
-        android:src="@drawable/backround"
+        android:src="@drawable/teamup"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -23,10 +23,11 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="@+id/backroundImg"
+        app:layout_constraintBottom_toBottomOf="@+id/teamup"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/backroundImg">
+        app:layout_constraintTop_toTopOf="@+id/teamup"
+        tools:ignore="ExtraText">
 
 
         <androidx.constraintlayout.widget.ConstraintLayout
