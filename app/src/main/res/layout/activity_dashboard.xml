@@ -19,17 +19,29 @@
             android:orientation="vertical"
             android:padding="16dp">
 
-            <!-- Eventos futuros (Scroll horizontal) -->
+            <!-- Dashboard -->
             <TextView
                 android:id="@+id/welcome"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Eventos Futuros"
+                android:text="Dashboard"
                 android:textColor="@color/white"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
-            <!-- Gráfico de bienestar -->
+            <!-- Proximos eventos -->
+            <TextView
+                android:id="@+id/nextEvents"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:text="Proximos eventos"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="" />
+
+
+            <!-- Wellness -->
             <HorizontalScrollView
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
@@ -45,6 +57,7 @@
                         android:layout_width="250dp"
                         android:layout_height="match_parent"
                         android:layout_marginRight="15dp"
+                        android:backgroundTint="#787878"
                         android:clipToOutline="true"
                         android:clipToPadding="true"
                         android:isScrollContainer="true"
@@ -56,6 +69,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Entrenamiento"
+                            android:textColor="#FDFDFD"
                             android:textSize="16sp"
                             android:textStyle="bold" />
 
@@ -63,13 +77,17 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:paddingTop="30dp"
-                            android:text="Manañana | 20:30hs - 22:30hs " />
+                            android:text="Manañana | 20:30hs - 22:30hs "
+                            android:textAlignment="textStart"
+                            android:textColor="#F8F8F8"
+                            android:textStyle="italic" />
                     </androidx.cardview.widget.CardView>
 
                     <androidx.cardview.widget.CardView
                         android:layout_width="250dp"
                         android:layout_height="match_parent"
                         android:paddingLeft="10dp"
+                        app:cardBackgroundColor="#787878"
                         app:cardCornerRadius="20dp"
                         app:contentPaddingLeft="15dp"
                         app:contentPaddingTop="15dp">
@@ -78,6 +96,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Entrenamiento"
+                            android:textColor="@color/white"
                             android:textSize="16sp"
                             android:textStyle="bold" />
 
@@ -85,7 +104,9 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:paddingTop="30dp"
-                            android:text="Viernes 09/05 | 20:30 - 22:30" />
+                            android:text="Viernes 09/05 | 20:30 - 22:30"
+                            android:textColor="@color/white"
+                            android:textStyle="italic" />
                     </androidx.cardview.widget.CardView>
 
 
@@ -109,7 +130,7 @@
                 android:layout_height="156dp"
                 android:background="#2E2E2E"
                 android:scaleType="centerInside"
-                android:src="@drawable/welness"/>
+                android:src="@drawable/welness" />
 
 
             <!-- Funcionalidades -->
@@ -123,6 +144,7 @@
                 android:textStyle="bold" />
 
             <LinearLayout
+                android:id="@+id/dynamicContentContainer"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
@@ -134,14 +156,18 @@
                     android:id="@+id/msgBtn"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginRight="20dp"
                     android:layout_weight="1"
+                    android:backgroundTint="#44803F"
                     android:text="Mensajes" />
 
                 <Button
                     android:id="@+id/rutinasBtn"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
                     android:layout_weight="1"
+                    android:backgroundTint="#44803F"
                     android:text="Rutinas" />
             </LinearLayout>
 
