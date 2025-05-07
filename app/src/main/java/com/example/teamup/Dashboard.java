@@ -19,23 +19,7 @@ public class Dashboard extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
 
-        eventContainer = findViewById(R.id.eventContainer);
-
-        // Cargar eventos dinámicos
-        for (int i = 1; i <= 5; i++) {
-            TextView welcomeMsg = findViewById(R.id.welcome);
-            welcomeMsg.setText("Bienvenido");
-            TextView event = new TextView(this);
-            event.setText("Evento");
-            event.setPadding(16, 16, 16, 16);
-            event.setBackgroundColor(Color.LTGRAY);
-            LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
-                    ViewGroup.LayoutParams.WRAP_CONTENT,
-                    ViewGroup.LayoutParams.MATCH_PARENT);
-            params.setMargins(16, 0, 0, 0);
-            event.setLayoutParams(params);
-            eventContainer.addView(event);
-        }
-
+        TextView welcomeMsg = findViewById(R.id.welcome);
+        welcomeMsg.setText("Bienvenido");
     }
 }
